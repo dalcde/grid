@@ -1,0 +1,112 @@
+<html>
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <form id="form">
+      <h1>Grid Paper</h1>
+      <div class="form-div">
+      <table>
+        <tr>
+          <td class="label"><label for="type">Type</label></td>
+          <td>
+            <select id="type">
+              <option>Grid</option>
+              <option>Dots</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td class="label">
+            <label for="paper">Paper size</label>
+          </td>
+          <td>
+            <select id="paper">
+              <option>A4</option>
+              <option>A3</option>
+              <option>Letter</option>
+              <option>Tabloid</option>
+              <option>Custom</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td class="label">
+            <label for="width">Width (in)</label>
+          </td>
+          <td>
+              <input type="number" disabled="true" id="width" step="any" value="11.7"></input>
+          </td>
+        </tr>
+        <tr>
+          <td class="label">
+            <label for="height">Height (in)</label>
+          </td>
+          <td>
+              <input type="number" disabled="true" id="height" step="any" value="8.27"></input>
+          </td>
+        </tr>
+        <tr>
+          <td class="label">
+            <label for="margin">Margin (in)</label>
+          </td>
+          <td>
+            <input type="number" id="margin" step="any" value="0.2"></input>
+          </td>
+        </tr>
+        <!-- For spacing -->
+        <tr style="visibility: hidden; margin: 0; padding: 0;">
+          <td style="margin: 0; padding: 0;"><div style="max-height: 0; margin: 0; padding: 0;">Grid size (in)</div></td>
+        </tr>
+      </table>
+      <table>
+        <tr>
+          <td class="label">
+            <label for="color">Color</label>
+          </td>
+          <td>
+            <label tabindex="0" id="color-parent" class="button">Select color
+              <input type="color" id="color" style="display: none" value="#5CC159">
+            </label>
+          </td>
+        </tr>
+        <tr>
+          <td class="label">
+            <label for="d">Grid size (in)</label>
+          </td>
+          <td>
+            <input type="number" id="d" step="any" min="0.02" value="0.2"></input>
+          </td>
+        </tr>
+        <tr>
+          <td class="label">
+            <label for="num_x">Number X</label>
+          </td>
+          <td>
+            <input type="number" id="num_x" min="1" value="56" title="Number of grids in the X direction"></input>
+          </td>
+        </tr>
+        <tr>
+          <td class="label">
+            <label for="num_y">Number Y</label>
+          </td>
+          <td>
+            <input type="number" id="num_y" min="1" value="39" title="Number of grids in the Y direction"></input>
+          </td>
+        </tr>
+        <tr>
+          <td class="label">
+            <label for="num_pages">Pages</label>
+          </td>
+          <td>
+            <input type="number" id="num_pages" min="1" value="1" title="Number of pages. This is especially useful if you want to print your grid paper double-sided."></input>
+          </td>
+        </tr>
+      </table>
+      </div>
+      <button type="submit" class="button">Download PDF</button>
+    </form>
+    <script src="index.js" type="module"></script>
+  </body>
+</html>

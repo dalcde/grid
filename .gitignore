@@ -1,0 +1,6 @@
+/target
+**/*.rs.bk
+Cargo.lock
+test.pdf
+dist/grid.js
+dist/grid_bg.wasm
